@@ -1,7 +1,7 @@
 from langchain.prompts import PromptTemplate
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import faiss
-from langchain.llms import ctransformers
+from langchain.llms import CTransformers
 from langchain.chains import RetrievalQA
 from config import *
 
@@ -25,7 +25,7 @@ class EduBotCreator:
         return custom_prompt_temp
     
     def load_llm(self):
-        llm = ctransformers(
+        llm = CTransformers(
             model = self.model_ckpt,
             model_type = self.model_type,
             max_new_tokens = self.max_new_tokens,

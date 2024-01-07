@@ -1,5 +1,6 @@
 pypdf
-langchain
+langchain==0.0.306 
+ctransformers
 torch
 accelerate
 bitsandbytes

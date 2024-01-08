@@ -5,6 +5,10 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from config import * 
 
 def faiss_vector_db():
+    """
+    The function `faiss_vector_db()` loads PDF documents, splits them into chunks, creates embeddings
+    using a HuggingFace model, and saves the resulting vector store using FAISS.
+    """
 
     dir_loader = DirectoryLoader(
                             DATA_DIR_PATH,
